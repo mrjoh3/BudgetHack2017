@@ -1,0 +1,47 @@
+---
+title: "budget choices"
+output:
+  html_document:
+    theme: journal
+    css: libs/bootstrap.min.css
+---
+
+
+<style type="text/css">
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css");
+</style>
+<script>
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js");
+</script>
+
+
+```{r, echo=FALSE}
+
+library(crosstalk)
+library(sortableR)
+library(htmltools)
+
+
+bscols(
+  tagList(
+    tags$h2('Budget 2017'),
+    tags$ul(class="list-group"
+      ,tags$li("Education")
+      ,tags$li("Health")
+      ,tags$li("Roads")
+    )
+  ),
+  tagList(
+    tags$h2('Your Priorities'),
+    tags$ul(id = "uniqueId01",  class="list-group"
+      ,tags$li("Education")
+      ,tags$li("Health")
+      ,tags$li("Roads")
+    )
+    ,sortableR("uniqueId01") # use the id as the selector
+  )
+)
+
+
+
+```

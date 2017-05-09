@@ -1,0 +1,155 @@
+
+
+<html>
+<head>
+
+<script src="libs/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<link rel="stylesheet" href='libs/styles.css'></link>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="libs/Sortable.js"></script>
+
+<!-- <script src='libs/d3-3.5.16/d3.min.js'></script> -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src='libs/c3-0.4.11/c3.min.js'></script>
+<link rel="stylesheet" href='libs/c3-0.4.11/c3.min.css'></link>
+
+<script src='libs/metricsgraphics.js'></script>
+<link rel="stylesheet" href='libs/metricsgraphics.css'></link>
+<link rel="stylesheet" href='libs/metricsgraphics-demo-dark.css'></link>
+
+
+
+<style>
+.title {
+    color: #fff;
+    padding: 3px 10px;
+    display: inline-block;
+    position: relative;
+    background-color: #FF7373;
+    z-index: 1000;
+}
+.tab-pane {
+    padding: 60px;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class='col', style="padding: 40px;">
+        <h1>Budget Priorities</h1>
+    </div>
+
+    <div class='row'>
+        <div class="col-md-5">
+            <div class="layer title"><h2>Government Priorities</h2></div>
+            <ul class="list-group nav nav-pills nav-stacked">
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#pt">Public transport</a><span class="badge badge-default badge-pill">$1.447 bn</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#health">Health</a><span class="badge badge-default badge-pill">$4.4 bn</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#roads">Roads</a><span class="badge badge-default badge-pill">$2.9 bn</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#education">Education</a><span class="badge badge-default badge-pill">$1.8 bn</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#housing">Housing</a><span class="badge badge-default badge-pill">$2 bn</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#mhealth">Mental Health and Disability</a><span class="badge badge-default badge-pill">$695 m</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#gender">Gender Equality</a><span class="badge badge-default badge-pill">$141 m</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#regions">Regional Victoria</a><span class="badge badge-default badge-pill">$4 bn?</span>
+                </li>
+
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#safe">Safer communities</a><span class="badge badge-default badge-pill">$668.1 m</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#community">Our community</a><span class="badge badge-default badge-pill">$? bn</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#familyviolence">Family violence</a><span class="badge badge-default badge-pill">$? bn</span>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-5">
+            <div class="layer title"><h2>Select YOUR Priorities</h2></div>
+            <ul id="sort" class="list-group">
+              <li class="list-group-item">Public transport</li>
+              <li class="list-group-item">Health</li>
+              <li class="list-group-item">Roads</li>
+              <li class="list-group-item">Housing</li>
+              <li class="list-group-item">Mental Health and Disability</li>
+              <li class="list-group-item">Gender Equality</li>
+              <li class="list-group-item">Regional Victoria</li>
+              <li class="list-group-item">Education</li>
+              <li class="list-group-item">Safer communities</li>
+              <li class="list-group-item">Our community</li>
+              <li class="list-group-item">Family violence</li>
+            </ul>
+            <!-- <button id="addPriority">Add</button> -->
+        </div>
+    </div>
+    <div class='row'>
+        <div class="tab-content">
+          <div id="pt" class="tab-pane fade in active">
+            <h3>PT</h3>
+            <p>Some content.</p>
+          </div>
+          <div id="health" class="tab-pane fade">
+            <h3>Health</h3>
+            <p>patient-reported outcomes measures (PROM's) are to be implimented in 2017 <a href='https://www2.health.vic.gov.au/hospitals-and-health-services/quality-safety-service/collecting-patient-reported-outcome-measures/reports'>link</a></p>
+            <div id='health-crt' style='width: 1000px;'></div>
+          </div>
+          <div id="roads" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Some content in menu 2.</p>
+          </div>
+          <div id="education" class="tab-pane fade">
+              <h3>Education</h3>
+              <div id='edu-crt' style='width: 1000px;'></div>
+          </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    var list = document.getElementById("sort");
+    Sortable.create(list, {
+      filter: '.js-remove',
+      onFilter: function (evt) {
+        var el = editableList.closest(evt.item); // get dragged item
+        el && el.parentNode.removeChild(el);
+      }
+    }); // That's all.
+
+    // $('addPriority').onclick = function () {
+	// 	Ply.dialog('prompt', {
+	// 		title: 'Add',
+	// 		form: { name: 'priority' }
+	// 	}).done(function (ui) {
+	// 		var el = document.createElement('li');
+	// 		el.innerHTML = ui.data.name + '<i class="js-remove">✖</i>';
+	// 		editableList.el.appendChild(el);
+	// 	});
+	// };
+
+</script>
+
+<script src='app.js'></script>
+
+</body>
+</html>
