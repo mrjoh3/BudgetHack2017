@@ -32,25 +32,28 @@
 .tab-pane {
     padding: 60px;
 }
+.active {
+    color: pink !important;
+}
+li {
+    color: #3a3f44;
+}
 </style>
 
 </head>
 <body>
 
 
-<div class="container">
+<div class="container-fluid">
 
     <div class='col', style="padding: 40px;">
-        <h1>Budget Priorities</h1>
+        <h1>Priorities</h1>
     </div>
 
     <div class='row'>
-        <div class="col-md-5">
+        <div class="col-md-4">
             <div class="layer title"><h2>Government Priorities</h2></div>
             <ul class="list-group nav nav-pills nav-stacked">
-                <li class="list-group-item justify-content-between">
-                    <a data-toggle="tab" href="#pt">Public transport</a><span class="badge badge-default badge-pill">$1.447 bn</span>
-                </li>
                 <li class="list-group-item justify-content-between">
                     <a data-toggle="tab" href="#health">Health</a><span class="badge badge-default badge-pill">$4.4 bn</span>
                 </li>
@@ -58,13 +61,13 @@
                     <a data-toggle="tab" href="#roads">Roads</a><span class="badge badge-default badge-pill">$2.9 bn</span>
                 </li>
                 <li class="list-group-item justify-content-between">
-                    <a data-toggle="tab" href="#education">Education</a><span class="badge badge-default badge-pill">$1.8 bn</span>
-                </li>
-                <li class="list-group-item justify-content-between">
                     <a data-toggle="tab" href="#housing">Housing</a><span class="badge badge-default badge-pill">$2 bn</span>
                 </li>
                 <li class="list-group-item justify-content-between">
-                    <a data-toggle="tab" href="#mhealth">Mental Health and Disability</a><span class="badge badge-default badge-pill">$695 m</span>
+                    <a data-toggle="tab" href="#education">Education</a><span class="badge badge-default badge-pill">$1.8 bn</span>
+                </li>
+                <li class="list-group-item justify-content-between">
+                    <a data-toggle="tab" href="#pt">Public transport</a><span class="badge badge-default badge-pill">$1.4 bn</span>
                 </li>
                 <li class="list-group-item justify-content-between">
                     <a data-toggle="tab" href="#gender">Gender Equality</a><span class="badge badge-default badge-pill">$141 m</span>
@@ -72,34 +75,30 @@
                 <li class="list-group-item justify-content-between">
                     <a data-toggle="tab" href="#regions">Regional Victoria</a><span class="badge badge-default badge-pill">$4 bn?</span>
                 </li>
-
                 <li class="list-group-item justify-content-between">
-                    <a data-toggle="tab" href="#safe">Safer communities</a><span class="badge badge-default badge-pill">$668.1 m</span>
-                </li>
-                <li class="list-group-item justify-content-between">
-                    <a data-toggle="tab" href="#community">Our community</a><span class="badge badge-default badge-pill">$? bn</span>
+                    <a data-toggle="tab" href="#community">Community</a><span class="badge badge-default badge-pill">$? bn</span>
                 </li>
                 <li class="list-group-item justify-content-between">
                     <a data-toggle="tab" href="#familyviolence">Family violence</a><span class="badge badge-default badge-pill">$? bn</span>
                 </li>
             </ul>
         </div>
-        <div class="col-md-5">
-            <div class="layer title"><h2>Select YOUR Priorities</h2></div>
+        <div class="col-md-4">
+            <div class="layer title"><h2>YOUR Priorities</h2></div>
             <ul id="sort" class="list-group">
               <li class="list-group-item">Public transport</li>
               <li class="list-group-item">Health</li>
               <li class="list-group-item">Roads</li>
               <li class="list-group-item">Housing</li>
-              <li class="list-group-item">Mental Health and Disability</li>
               <li class="list-group-item">Gender Equality</li>
               <li class="list-group-item">Regional Victoria</li>
               <li class="list-group-item">Education</li>
-              <li class="list-group-item">Safer communities</li>
-              <li class="list-group-item">Our community</li>
+              <li class="list-group-item">Communities</li>
               <li class="list-group-item">Family violence</li>
             </ul>
             <!-- <button id="addPriority">Add</button> -->
+        </div>
+        <div class="col-md-4">
         </div>
     </div>
     <div class='row'>
@@ -153,3 +152,6 @@
 
 </body>
 </html>
+
+
+<!-- languge of new media -->
