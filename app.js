@@ -20,12 +20,12 @@
 //     });
 
 var ed_data = [[{"date": new Date("2011-08-28"),"value": 315707},
-        {"date": new Date("2012-08-28"),"value": 321752},
-        {"date": new Date("2013-08-28"),"value": 330272},
-        {"date": new Date("2014-08-28"),"value": 339318},
-        {"date": new Date("2015-08-28"),"value": 348862}
-    ],
-        [{"date": new Date("2011-08-28"),"value": 224222},
+                {"date": new Date("2012-08-28"),"value": 321752},
+                {"date": new Date("2013-08-28"),"value": 330272},
+                {"date": new Date("2014-08-28"),"value": 339318},
+                {"date": new Date("2015-08-28"),"value": 348862}
+               ],
+               [{"date": new Date("2011-08-28"),"value": 224222},
                 {"date": new Date("2012-08-28"),"value": 223254},
                 {"date": new Date("2013-08-28"),"value": 223170},
                 {"date": new Date("2014-08-28"),"value": 224231},
