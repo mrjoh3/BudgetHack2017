@@ -19,6 +19,9 @@
 <link rel="stylesheet" href='libs/metricsgraphics.css'></link>
 <link rel="stylesheet" href='libs/metricsgraphics-demo-dark.css'></link>
 
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+<link rel="stylesheet" href="libs/gridstack.css" />
+<script src="libs/gridstack.js"></script>
 
 
 <style>
@@ -42,6 +45,13 @@
 li {
     color: #3a3f44;
 }
+.card {
+    max-width: 30vw;
+    width: 30vw;
+}
+.row {
+    padding-bottom: 20px;
+}
 </style>
 
 </head>
@@ -59,89 +69,79 @@ li {
             <div class="layer title"><h2>Your Choices</h2></div>
             <!-- <button id="addPriority">Add</button> -->
         </div>
-        <div class="col-md-4">
+        <div class="col-md-8">
             <div class="layer title"><h2>Government Priorities</h2></div>
-            <div class="card" id='sort'>
+            <div class="card-deck-wrapper">
+            <div class="card-deck"  id="sort">
+
             <div class='row'>
-                <div class="col-sm-4">
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#health">Health</a></h4><span class="badge badge-default badge-pill">$4.4 bn</span>
-                </div></div>
-                <div class="col-sm-4">
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#roads">Roads</a></h4><span class="badge badge-default badge-pill">$2.9 bn</span>
-                </div></div>
-                <div class="col-sm-4">
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#housing">Housing</a></h4><span class="badge badge-default badge-pill">$2 bn</span>
-                </div></div>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#health">Health</a></h4></div>
+                    <div class="col-xs-4 card-block">
+                        <span class="badge badge-default badge-pill">$4.4 bn</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#roads">Roads</a></h4></div>
+                <div class="col-xs-4 card-block">
+                    <span class="badge badge-default badge-pill">$2.9 bn</span>
+                </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#housing">Housing</a></h4></div>
+                    <div class="col-xs-4 card-block">
+                        <span class="badge badge-default badge-pill">$2 bn</span>
+                    </div>
+                </div>
             </div>
 
 
             <div class='row'>
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#education">Education</a></h4><span class="badge badge-default badge-pill">$1.8 bn</span>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#education">Education</a></h4></div>
+                    <div class="col-sm-4 card-block">
+                        <span class="badge badge-default badge-pill">$1.8 bn</span>
+                    </div>
                 </div>
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#pt">Public transport</a></h4><span class="badge badge-default badge-pill">$1.4 bn</span>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#pt">Public transport</a></h4></div>
+                    <div class="col-sm-4 card-block">
+                        <span class="badge badge-default badge-pill">$1.4 bn</span>
+                    </div>
                 </div>
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#gender">Gender Equality</a></h4><span class="badge badge-default badge-pill">$141 m</span>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#gender">Gender Equality</a></h4></div>
+                    <div class="col-sm-4 card-block">
+                        <span class="badge badge-default badge-pill">$141 m</span>
+                    </div>
                 </div>
             </div>
 
             <div class='row'>
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#regions">Regional Victoria</a></h4><span class="badge badge-default badge-pill">$4 bn?</span>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#regions">Regional Victoria</a></h4></div>
+                    <div class="col-sm-4 card-block">
+                        <span class="badge badge-default badge-pill">$4 bn?</span>
+                    </div>
                 </div>
-                <div class="card-block">
-                    <h4 class="card-title"><a data-toggle="tab" href="#familyviolence">Family violence</a></h4><span class="badge badge-default badge-pill">$? bn</span>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#familyviolence">Family violence</a></h4></div>
+                    <div class="col-sm-4 card-block">
+                        <span class="badge badge-default badge-pill">$? bn</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header"><h4><a data-toggle="tab" href="#familyviolence">Your Choice</a></h4></div>
+                    <div class="col-sm-4 card-block">
+                        <span class="badge badge-default badge-pill">$? bn</span>
+                    </div>
                 </div>
             </div>
+        </div>
             </div>
         </div>
 
-            <div class="main-login main-center col-md-4">
-				<div class="layer title"><h2>Other Information</h2></div>
-					<form class="" method="post" action="#">
 
-						<div class="form-group">
-							<label for="name" class="cols-sm-2 control-label">Your Suburb</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="suburb" id="suburb"  placeholder="Enter your Suburb"/>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label for="email" class="cols-sm-2 control-label">Your Gender</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="gender" id="gender"  placeholder="Enter your Gender"/>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group">
-							<label for="username" class="cols-sm-2 control-label">Your Age</label>
-							<div class="cols-sm-10">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-									<input type="text" class="form-control" name="age" id="age"  placeholder="Enter your Age"/>
-								</div>
-							</div>
-						</div>
-
-						<div class="form-group ">
-							<a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Submit</a>
-						</div>
-
-					</form>
-
-        </div>
     </div>
     <div class='row'>
         <div class="tab-content">
@@ -164,19 +164,94 @@ li {
           </div>
         </div>
     </div>
+<div class="row">
+    <div class="main-login main-center col-md-4">
+        <div class="layer title"><h2>Other Information</h2></div>
+            <form class="" method="post" action="#">
+
+                <div class="form-group">
+                    <label for="name" class="cols-sm-2 control-label">Your Suburb</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="suburb" id="suburb"  placeholder="Enter your Suburb"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email" class="cols-sm-2 control-label">Your Gender</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="gender" id="gender"  placeholder="Enter your Gender"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="cols-sm-2 control-label">Your Age</label>
+                    <div class="cols-sm-10">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control" name="age" id="age"  placeholder="Enter your Age"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group ">
+                    <a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Submit</a>
+                </div>
+
+            </form>
+
+    </div>
+</div>
+    <!-- <div class="row">
+        <div class="grid-stack col-sm-12"  id="sort">
+            <div class="grid-stack-item" id='bar'
+                data-gs-x="0" data-gs-y="0"
+                data-gs-width="3" data-gs-height="2">
+                    <div class="grid-stack-item-content">something here</div>
+            </div>
+            <div class="grid-stack-item" id='bar'
+                data-gs-x="4" data-gs-y="0"
+                data-gs-width="3" data-gs-height="2">
+                    <div class="grid-stack-item-content">something else here</div>
+            </div>
+            <div class="grid-stack-item" id='bar'
+                data-gs-x="8" data-gs-y="0"
+                data-gs-width="3" data-gs-height="2">
+                    <div class="grid-stack-item-content">three here</div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+        $(function () {
+            var options = {
+                cellHeight: 80,
+                verticalMargin: 10
+            };
+            $('.grid-stack').gridstack(options);
+        });
+        </script>
+    </div> -->
 </div>
 
 <script>
 
     var list = document.getElementById("sort");
     Sortable.create(list, {
-      filter: '.js-remove',
-      onFilter: function (evt) {
-        var el = editableList.closest(evt.item); // get dragged item
-        el && el.parentNode.removeChild(el);
-      }
+        //animation: 150, // ms, animation speed moving items when sorting, `0` — without animation
+        //handle: ".grid-stack-item-content", // Restricts sort start click/touch to the specified element
+        draggable: ".row"
     }); // That's all.
-
+    [].forEach.call(document.getElementById("sort").getElementsByClassName('row'), function (el){
+		Sortable.create(el, {
+			group: 'photo',
+			animation: 150
+		});
+	});
     // $('addPriority').onclick = function () {
 	// 	Ply.dialog('prompt', {
 	// 		title: 'Add',
@@ -190,7 +265,12 @@ li {
 
 </script>
 
+
 <script src='app.js'></script>
+
+
+
+
 
 </body>
 </html>
