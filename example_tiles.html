@@ -19,55 +19,47 @@
 <link rel="stylesheet" href='libs/metricsgraphics.css'></link>
 <link rel="stylesheet" href='libs/metricsgraphics-demo-dark.css'></link>
 
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
-<link rel="stylesheet" href="libs/gridstack.css" />
-<script src="libs/gridstack.js"></script>
-
-
-<style>
-.title {
-    color: #fff;
-    padding: 3px 10px;
-    display: inline-block;
-    position: relative;
-    background-color: #FF7373;
-    z-index: 1000;
-}
-.jumbotron {
-    background-color: #5c5e5f;
-}
-.tab-pane {
-    padding: 60px;
-}
-.active {
-    color: pink !important;
-}
-li {
-    color: #3a3f44;
-}
-.card {
-    max-width: 30vw;
-    width: 30vw;
-}
-.row {
-    padding-bottom: 20px;
-}
-</style>
+<link rel="stylesheet" href="app.css" />
 
 </head>
 <body>
 
 <div class="jumbotron">
-    <h1>Priorities</h1>
-    <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
+    <h1><i class="fa fa-info" aria-hidden="true"></i>Treasurer</h1>
+    <p>Each year the Victorian Bugdet outlines Government Priorities and Ambitions. Now You can participate and contributr to the democatic process.    </p>
+    <div class='active'><a data-toggle="tab" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></div>
 </div>
 
 <div class="container-fluid">
 
-    <div class='row'>
+    <div class='row' style="margin-right: 20px">
         <div class="col-md-4">
-            <div class="layer title"><h2>Your Choices</h2></div>
-            <!-- <button id="addPriority">Add</button> -->
+            <div class="layer title"><h2>Trends</h2></div>
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+                  <h3>Total Spending</h3>
+                  <div class='row'><h4>Spending</h4></div>
+                  <div class='row'><h4>Outcomes</h4></div>
+                </div>
+              <div id="pt" class="tab-pane fade">
+                <h3>Public Transport</h3>
+                <div class='row'><h4>Spending</h4></div>
+                <div class='row'><h4>Outcomes</h4></div>
+              </div>
+              <div id="health" class="tab-pane fade">
+                <h3>Health</h3>
+                <p>patient-reported outcomes measures (PROM's) are to be implimented in 2017 <a href='https://www2.health.vic.gov.au/hospitals-and-health-services/quality-safety-service/collecting-patient-reported-outcome-measures/reports'>link</a></p>
+                <div id='health-crt' style='width: 1000px;'></div>
+              </div>
+              <div id="roads" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Some content in menu 2.</p>
+              </div>
+              <div id="education" class="tab-pane fade">
+                  <h3>Education</h3>
+                  <div id='edu-crt' style='width: 1000px;'></div>
+              </div>
+            </div>
         </div>
         <div class="col-md-8">
             <div class="layer title"><h2>Government Priorities</h2></div>
@@ -76,21 +68,18 @@ li {
 
             <div class='row'>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#health">Health</a></h4></div>
                     <div class="col-xs-4 card-block">
-                        <span class="badge badge-default badge-pill">$4.4 bn</span>
+                        <a data-toggle="tab" href="#health"><img src="img/Health.png"></img></a><span class="badge">$4.4</span>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#roads">Roads</a></h4></div>
                 <div class="col-xs-4 card-block">
-                    <span class="badge badge-default badge-pill">$2.9 bn</span>
+                    <a data-toggle="tab" href="#roads"><img src="img/Road.png"></img></a><span class="badge">$2.9</span>
                 </div>
                 </div>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#housing">Housing</a></h4></div>
                     <div class="col-xs-4 card-block">
-                        <span class="badge badge-default badge-pill">$2 bn</span>
+                        <a data-toggle="tab" href="#community"><img src="img/Community.png"></img></a><span class="badge">$2</span>
                     </div>
                 </div>
             </div>
@@ -98,73 +87,56 @@ li {
 
             <div class='row'>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#education">Education</a></h4></div>
-                    <div class="col-sm-4 card-block">
-                        <span class="badge badge-default badge-pill">$1.8 bn</span>
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#education"><img src="img/Education.png"></img></a><span class="badge">$1.8</span>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#pt">Public transport</a></h4></div>
-                    <div class="col-sm-4 card-block">
-                        <span class="badge badge-default badge-pill">$1.4 bn</span>
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#pt"><img src="img/Public transportation.png"></img></a><span class="badge">$1.4</span>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#gender">Gender Equality</a></h4></div>
-                    <div class="col-sm-4 card-block">
-                        <span class="badge badge-default badge-pill">$141 m</span>
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#gender"><img src="img/gender equality.png"></img></a><span class="badge">$0.14</span>
                     </div>
                 </div>
             </div>
 
             <div class='row'>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#regions">Regional Victoria</a></h4></div>
-                    <div class="col-sm-4 card-block">
-                        <span class="badge badge-default badge-pill">$4 bn?</span>
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#regions"><img src="img/Regional.png"></img></a><span class="badge">$4</span>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#familyviolence">Family violence</a></h4></div>
-                    <div class="col-sm-4 card-block">
-                        <span class="badge badge-default badge-pill">$? bn</span>
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#familyviolence"><img src="img/Family violence.png"></img></a><span class="badge">$?</span>
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header"><h4><a data-toggle="tab" href="#familyviolence">Your Choice</a></h4></div>
-                    <div class="col-sm-4 card-block">
-                        <span class="badge badge-default badge-pill">$? bn</span>
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#other">
+                            <span class="fa-stack fa-3x">
+                              <i class="fa fa-circle fa-stack-2x icon-background4"></i>
+                               <i class="fa fa-circle-thin fa-stack-2x icon-background6"></i>
+
+                              <i class="fa fa-question fa-stack-1x"></i>
+                            </span>
+                        </a>
+                        <!-- <span class="badge">?</span> -->
                     </div>
                 </div>
             </div>
         </div>
             </div>
         </div>
-
-
     </div>
-    <div class='row'>
-        <div class="tab-content">
-          <div id="pt" class="tab-pane fade in active">
-            <h3>PT</h3>
-            <p>Some content.</p>
-          </div>
-          <div id="health" class="tab-pane fade">
-            <h3>Health</h3>
-            <p>patient-reported outcomes measures (PROM's) are to be implimented in 2017 <a href='https://www2.health.vic.gov.au/hospitals-and-health-services/quality-safety-service/collecting-patient-reported-outcome-measures/reports'>link</a></p>
-            <div id='health-crt' style='width: 1000px;'></div>
-          </div>
-          <div id="roads" class="tab-pane fade">
-            <h3>Menu 2</h3>
-            <p>Some content in menu 2.</p>
-          </div>
-          <div id="education" class="tab-pane fade">
-              <h3>Education</h3>
-              <div id='edu-crt' style='width: 1000px;'></div>
-          </div>
-        </div>
-    </div>
+
 <div class="row">
+    <div class='col-md-8'>
+        <div class="layer title"><h2>Your Choices</h2></div>
+    </div>
     <div class="main-login main-center col-md-4">
         <div class="layer title"><h2>Other Information</h2></div>
             <form class="" method="post" action="#">
@@ -173,7 +145,7 @@ li {
                     <label for="name" class="cols-sm-2 control-label">Your Suburb</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></i></span>
                             <input type="text" class="form-control" name="suburb" id="suburb"  placeholder="Enter your Suburb"/>
                         </div>
                     </div>
@@ -183,7 +155,7 @@ li {
                     <label for="email" class="cols-sm-2 control-label">Your Gender</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" name="gender" id="gender"  placeholder="Enter your Gender"/>
                         </div>
                     </div>
@@ -193,7 +165,7 @@ li {
                     <label for="username" class="cols-sm-2 control-label">Your Age</label>
                     <div class="cols-sm-10">
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                             <input type="text" class="form-control" name="age" id="age"  placeholder="Enter your Age"/>
                         </div>
                     </div>
@@ -207,61 +179,21 @@ li {
 
     </div>
 </div>
-    <!-- <div class="row">
-        <div class="grid-stack col-sm-12"  id="sort">
-            <div class="grid-stack-item" id='bar'
-                data-gs-x="0" data-gs-y="0"
-                data-gs-width="3" data-gs-height="2">
-                    <div class="grid-stack-item-content">something here</div>
-            </div>
-            <div class="grid-stack-item" id='bar'
-                data-gs-x="4" data-gs-y="0"
-                data-gs-width="3" data-gs-height="2">
-                    <div class="grid-stack-item-content">something else here</div>
-            </div>
-            <div class="grid-stack-item" id='bar'
-                data-gs-x="8" data-gs-y="0"
-                data-gs-width="3" data-gs-height="2">
-                    <div class="grid-stack-item-content">three here</div>
-            </div>
-        </div>
 
-        <script type="text/javascript">
-        $(function () {
-            var options = {
-                cellHeight: 80,
-                verticalMargin: 10
-            };
-            $('.grid-stack').gridstack(options);
-        });
-        </script>
-    </div> -->
 </div>
 
 <script>
 
     var list = document.getElementById("sort");
     Sortable.create(list, {
-        //animation: 150, // ms, animation speed moving items when sorting, `0` — without animation
-        //handle: ".grid-stack-item-content", // Restricts sort start click/touch to the specified element
         draggable: ".row"
-    }); // That's all.
+    });
     [].forEach.call(document.getElementById("sort").getElementsByClassName('row'), function (el){
 		Sortable.create(el, {
 			group: 'photo',
 			animation: 150
 		});
 	});
-    // $('addPriority').onclick = function () {
-	// 	Ply.dialog('prompt', {
-	// 		title: 'Add',
-	// 		form: { name: 'priority' }
-	// 	}).done(function (ui) {
-	// 		var el = document.createElement('li');
-	// 		el.innerHTML = ui.data.name + '<i class="js-remove">✖</i>';
-	// 		editableList.el.appendChild(el);
-	// 	});
-	// };
 
 </script>
 

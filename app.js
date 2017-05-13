@@ -47,10 +47,10 @@ var ed_data = [[{"date": new Date("2011-08-28"),"value": 315707},
 
 
 // HEALTH
-var health_data = [{"date": new Date("2011-08-28"),"value": 0.78},
+var health_data = [{"date": new Date("2011-08-28"),"value": 0.48},
                 {"date": new Date("2012-08-28"),"value": 0.65},
-                {"date": new Date("2013-08-28"),"value": 0.63},
-                {"date": new Date("2014-08-28"),"value": 0.71},
+                {"date": new Date("2013-08-28"),"value": 0.53},
+                {"date": new Date("2014-08-28"),"value": 0.81},
                 {"date": new Date("2015-08-28"),"value": 0.69}
                 ];
 

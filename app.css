@@ -1,0 +1,51 @@
+
+
+.title {
+    color: #fff;
+    padding: 3px 10px;
+    display: inline-block;
+    position: relative;
+    background-color: #FF7373;
+    z-index: 1000;
+}
+.jumbotron {
+    background-color: #5c5e5f;
+}
+.tab-pane {
+    padding: 60px;
+}
+.active {
+    color: pink !important;
+}
+li {
+    color: #3a3f44;
+}
+.card {
+    max-width: 30vw;
+    width: 30vw;
+}
+.row {
+    padding-bottom: 20px;
+}
+.card-block img {
+    width: 5vw;
+}
+.card {
+    background-color: #7fa0df;
+}
+.badge {
+    font-family: sans-serif;
+    font: impact;
+    font-size: 200%;
+    float: right;
+    position: relative;
+    top: 0;
+    right: 5px;
+}
+
+.icon-background4 {
+    color: #f7f7f7;
+}
+.icon-background6, .fa-question {
+    color: #000800;
+}
