@@ -19,6 +19,8 @@
 <link rel="stylesheet" href='libs/metricsgraphics.css'></link>
 <link rel="stylesheet" href='libs/metricsgraphics-demo-dark.css'></link>
 
+<script src='libs/palette.js'></script>
+
 <link rel="stylesheet" href="app.css" />
 
 </head>
@@ -136,6 +138,7 @@
 <div class="row">
     <div class='col-md-8'>
         <div class="layer title"><h2>Your Choices</h2></div>
+        <div id='live-plot'></div>
     </div>
     <div class="main-login main-center col-md-4">
         <div class="layer title"><h2>Other Information</h2></div>
@@ -172,7 +175,7 @@
                 </div>
 
                 <div class="form-group ">
-                    <a href="#" target="_blank" type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Submit</a>
+                    <a type="button" id="button" class="btn btn-primary btn-lg btn-block login-button">Submit</a>
                 </div>
 
             </form>
@@ -200,7 +203,18 @@
 
 <script src='app.js'></script>
 
+<script>
+document.getElementById('button').onclick = function(){
+   updatePlot(lv = lv, pal = pal, step = 10)
+}
+// window.setInterval(function(){
+//     $( document ).ready(function() {
+//         updatePlot(lv = lv, pal = pal, step = 1)
+//     });
+// }, 1000);
+//
 
+</script>
 
 
 
