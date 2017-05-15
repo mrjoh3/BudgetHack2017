@@ -39,28 +39,93 @@
             <div class="layer title"><h2>Trends</h2></div>
             <div class="tab-content">
                 <div id="home" class="tab-pane fade in active">
-                  <h3>Total Spending</h3>
-                  <div class='row'><h4>Spending</h4></div>
-                  <div class='row'><h4>Outcomes</h4></div>
+                  <h3>State Budget 2017-18</h3>
+                  <div class='row'>
+                      <div id='total-crt' style='width: 600px;'></div>
+                  </div>
+                  <div class='row'>
+                      <div id='pop' style='width: 600px;'></div>
+                  </div>
                 </div>
+
+
               <div id="pt" class="tab-pane fade">
                 <h3>Public Transport</h3>
-                <div class='row'><h4>Spending</h4></div>
-                <div class='row'><h4>Outcomes</h4></div>
+                <div class='row'></div>
+                <div class='row'></div>
               </div>
+
+
               <div id="health" class="tab-pane fade">
                 <h3>Health</h3>
-                <p>patient-reported outcomes measures (PROM's) are to be implimented in 2017 <a href='https://www2.health.vic.gov.au/hospitals-and-health-services/quality-safety-service/collecting-patient-reported-outcome-measures/reports'>link</a></p>
-                <div id='health-crt' style='width: 1000px;'></div>
+                <div class='row'>
+                    <div id='health-spend' style='width: 600px;'></div>
+                </div>
+                <div class='row'>
+                    <div id='health-crt' style='width: 600px;'></div>
+                </div>
+
+
               </div>
               <div id="roads" class="tab-pane fade">
-                <h3>Menu 2</h3>
-                <p>Some content in menu 2.</p>
+                <h3>Roads</h3>
+                <div class='row'>
+                    <div id='road-spend' style='width: 600px;'></div>
+                </div>
+                <div class='row'>
+                    <div id='road-toll' style='width: 600px;'></div>
+                </div>
               </div>
+
+
               <div id="education" class="tab-pane fade">
                   <h3>Education</h3>
-                  <div id='edu-crt' style='width: 1000px;'></div>
+                  <div class='row'>
+                      <div id='edu-spend' style='width: 600px;'></div>
+                  </div>
+                  <div class='row'>
+                      <div id='edu-crt' style='width: 600px;'></div>
+                  </div>
               </div>
+
+
+              <div id="community" class="tab-pane fade">
+                <h3>Community</h3>
+                <div class='row'>
+                    <div id='community-spend' style='width: 600px;'></div>
+                </div>
+                <div class='row'>
+                    <div id='community-crt' style='width: 600px;'></div>
+                </div>
+              </div>
+
+
+              <div id="gender" class="tab-pane fade">
+                <h3>Gender</h3>
+                <div class='row'></div>
+                <div class='row'></div>
+              </div>
+
+
+              <div id="regions" class="tab-pane fade">
+                <h3>Regions</h3>
+                <div class='row'></div>
+                <div class='row'></div>
+              </div>
+
+
+              <div id="family-violence" class="tab-pane fade">
+                <h3>Family Violence</h3>
+                <div class='row'></div>
+                <div class='row'></div>
+              </div>
+
+              <div id="other" class="tab-pane fade">
+                <h3>Your Priority?</h3>
+                <div class='row'></div>
+                <div class='row'></div>
+              </div>
+
             </div>
         </div>
         <div class="col-md-8">
@@ -74,48 +139,58 @@
                         <a data-toggle="tab" href="#health"><img src="img/Health.png"></img></a><span class="badge">$4.4</span>
                     </div>
                 </div>
-                <div class="card">
-                <div class="col-xs-4 card-block">
-                    <a data-toggle="tab" href="#roads"><img src="img/Road.png"></img></a><span class="badge">$2.9</span>
-                </div>
-                </div>
-                <div class="card">
-                    <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#community"><img src="img/Community.png"></img></a><span class="badge">$2</span>
-                    </div>
-                </div>
-            </div>
 
-
-            <div class='row'>
-                <div class="card">
-                    <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#education"><img src="img/Education.png"></img></a><span class="badge">$1.8</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#pt"><img src="img/Public transportation.png"></img></a><span class="badge">$1.4</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#gender"><img src="img/gender equality.png"></img></a><span class="badge">$0.14</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class='row'>
                 <div class="card">
                     <div class="col-xs-4 card-block">
                         <a data-toggle="tab" href="#regions"><img src="img/Regional.png"></img></a><span class="badge">$4</span>
                     </div>
                 </div>
+
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#familyviolence"><img src="img/Family violence.png"></img></a><span class="badge">$?</span>
+                        <a data-toggle="tab" href="#roads"><img src="img/Road.png"></img></a><span class="badge">$2.9</span>
                     </div>
                 </div>
+
+            </div>
+
+
+            <div class='row'>
+
+                <div class="card">
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#community"><img src="img/Community.png"></img></a><span class="badge">$2</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#family-violence"><img src="img/Family violence.png"></img></a><span class="badge">$1.9</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#education"><img src="img/Education.png"></img></a><span class="badge">$1.8</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class='row'>
+
+                <div class="card">
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#pt"><img src="img/Public transportation.png"></img></a><span class="badge">$1.4</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="col-xs-4 card-block">
+                        <a data-toggle="tab" href="#gender"><img src="img/gender equality.png"></img></a><span class="badge">$0.14</span>
+                    </div>
+                </div>
+
                 <div class="card">
                     <div class="col-xs-4 card-block">
                         <a data-toggle="tab" href="#other">
@@ -137,7 +212,7 @@
 
 <div class="row">
     <div class='col-md-8'>
-        <div class="layer title"><h2>Your Choices</h2></div>
+        <div class="layer title"><h2>Peoples Choices</h2></div>
         <div id='live-plot'></div>
     </div>
     <div class="main-login main-center col-md-4">
