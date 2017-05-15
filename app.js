@@ -19,47 +19,100 @@
 //         }
 //     });
 
-var ed_data = [[{"date": new Date("2011-08-28"),"value": 315707},
-                {"date": new Date("2012-08-28"),"value": 321752},
-                {"date": new Date("2013-08-28"),"value": 330272},
-                {"date": new Date("2014-08-28"),"value": 339318},
-                {"date": new Date("2015-08-28"),"value": 348862}
-               ],
-               [{"date": new Date("2011-08-28"),"value": 224222},
-                {"date": new Date("2012-08-28"),"value": 223254},
-                {"date": new Date("2013-08-28"),"value": 223170},
-                {"date": new Date("2014-08-28"),"value": 224231},
-                {"date": new Date("2015-08-28"),"value": 226619}
-                ]];
+var ed_data = [
+    [
+     {"date": new Date("2008-06-30"),"value": .693},
+     {"date": new Date("2009-06-30"),"value": .715},
+     {"date": new Date("2010-06-30"),"value": .698},
+     {"date": new Date("2011-06-30"),"value": .705},
+     {"date": new Date("2012-06-30"),"value": .706},
+     {"date": new Date("2013-06-30"),"value": .612},
+     {"date": new Date("2014-06-30"),"value": .731},
+     {"date": new Date("2015-06-30"),"value": .750},
+     {"date": new Date("2016-06-30"),"value": .708}
+ ],
+    [
+     {"date": new Date("2008-06-30"),"value": .631},
+     {"date": new Date("2009-06-30"),"value": .646},
+     {"date": new Date("2010-06-30"),"value": .650},
+     {"date": new Date("2011-06-30"),"value": .633},
+     {"date": new Date("2012-06-30"),"value": .644},
+     {"date": new Date("2013-06-30"),"value": .616},
+     {"date": new Date("2014-06-30"),"value": .659},
+     {"date": new Date("2015-06-30"),"value": .648},
+     {"date": new Date("2016-06-30"),"value": .642}
+ ],
+   [
+    {"date": new Date("2008-06-30"),"value": .626},
+    {"date": new Date("2009-06-30"),"value": .620},
+    {"date": new Date("2010-06-30"),"value": .617},
+    {"date": new Date("2011-06-30"),"value": .623},
+    {"date": new Date("2012-06-30"),"value": .645},
+    {"date": new Date("2013-06-30"),"value": .606},
+    {"date": new Date("2014-06-30"),"value": .647},
+    {"date": new Date("2015-06-30"),"value": .650},
+    {"date": new Date("2016-06-30"),"value": .624}
+    ]
+];
 
         MG.data_graphic({
-                title: "Student Numbers",
-                description: "This line chart contains multiple lines.",
+                title: "NAPLAN",
+                description: "Literacy Mean Scores. (<a href='http://reports.acara.edu.au/Home/TimeSeries'>source</a>)",
                 data: ed_data,
-                width: 1000,
+                format: 'percentage',
+                width: 600,
                 height: 200,
                 right: 140,
                 target: '#edu-crt',
+                min_y: .5,
                 yax_count: 3,
-                legend: ['primary','secondary']//,
+                legend: ['Year 5','Year 7','Year 9']//,
                 //interpolate: d3.curveStep
             });
 
 
+var ed_spend = [
+    [
+    {"date": new Date("2007-06-30"),"value": 8979000000},
+    {"date": new Date("2008-06-30"),"value": 9634000000},
+     {"date": new Date("2009-06-30"),"value": 10606000000},
+     {"date": new Date("2010-06-30"),"value": 11944000000},
+     {"date": new Date("2011-06-30"),"value": 12298000000},
+     {"date": new Date("2012-06-30"),"value": 12560000000},
+     {"date": new Date("2013-06-30"),"value": 12701000000},
+     {"date": new Date("2014-06-30"),"value": 13009000000},
+     {"date": new Date("2015-06-30"),"value": 13351000000},
+     {"date": new Date("2016-06-30"),"value": 13601000000}
+ ]
+];
+
+MG.data_graphic({
+        title: "Spending",
+        description: "Total operating expenses on education, by purpose. (<a href='http://www.abs.gov.au/AUSSTATS/abs@.nsf/DetailsPage/5518.0.55.0012015-16?OpenDocument'>source</a>)",
+        data: ed_spend,
+        width: 600,
+        height: 200,
+        right: 140,
+        target: '#edu-spend',
+        yax_units: '$',
+        yax_count: 3
+        //interpolate: d3.curveStep
+    });
+
 // HEALTH
-var health_data = [{"date": new Date("2011-08-28"),"value": 0.48},
-                {"date": new Date("2012-08-28"),"value": 0.65},
-                {"date": new Date("2013-08-28"),"value": 0.53},
-                {"date": new Date("2014-08-28"),"value": 0.81},
-                {"date": new Date("2015-08-28"),"value": 0.69}
+var health_data = [{"date": new Date("2011-06-30"),"value": 0.48},
+                {"date": new Date("2012-06-30"),"value": 0.65},
+                {"date": new Date("2013-06-30"),"value": 0.53},
+                {"date": new Date("2014-06-30"),"value": 0.81},
+                {"date": new Date("2015-06-30"),"value": 0.69}
                 ];
 
         MG.data_graphic({
                 title: "PROM's",
-                description: "patient-reported outcomes measures (PROM's)",
+                description: "patient-reported outcomes measures (PROM's) are to be implimented in 2017 <a href='https://www2.health.vic.gov.au/hospitals-and-health-services/quality-safety-service/collecting-patient-reported-outcome-measures/reports'>source</a>",
                 data: health_data,
                 format: 'percentage',
-                width: 1000,
+                width: 600,
                 height: 200,
                 right: 140,
                 yax_count: 3,
@@ -106,6 +159,7 @@ MG.data_graphic({
   width: 1000,
   right: 140,
   colors: pal,
+  x_label: 'Number of Respondants',
   target: '#live-plot',
   x_accessor: 'n',
   y_accessor: 'value'
