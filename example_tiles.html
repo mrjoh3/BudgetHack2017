@@ -27,14 +27,17 @@
 <body>
 
 <div class="jumbotron">
-    <h1><i class="fa fa-info" aria-hidden="true"></i>Treasurer</h1>
-    <p>Each year the Victorian Bugdet outlines Government Priorities and Ambitions. Now You can participate and contributr to the democatic process.    </p>
-    <div class='active'><a data-toggle="tab" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></div>
+    <div id='banner-img'><img src="img/banner2.png" style="height: 35%;"></img></div>
+    <div style="float: right; position: absolute; top: 70px; right: 20px; width: 50%; display: block;">
+        <h1 style="font-size: 1000%; font: Impact; color: #cbd4be;"><i class="fa fa-info" aria-hidden="true"></i>Treasurer</h1>
+        <p>Each year the Victorian Bugdet outlines Government Priorities. Now YOU can participate in this democatic process.</p>
+        <div class='active'><a data-toggle="tab" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></div>
+    </div>
 </div>
 
 <div class="container-fluid">
 
-    <div class='row' style="margin-right: 20px">
+    <div class='row' style="margin-right: 20px; clear: both; padding-top: 40px;">
         <div class="col-md-4">
             <div class="layer title"><h2>Trends</h2></div>
             <div class="tab-content">
@@ -139,19 +142,19 @@
             <div class='row'>
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#health"><img src="img/Health.png"></img></a><span class="badge">$4.4</span>
+                        <a data-toggle="tab" href="#health"><img src="img/Health.svg"></img></a><span class="badge">$4.4b</span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#regions"><img src="img/Regional.png"></img></a><span class="badge">$4</span>
+                        <a data-toggle="tab" href="#regions"><img src="img/Regional.svg"></img></a><span class="badge">$4b</span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#roads"><img src="img/Road.png"></img></a><span class="badge">$2.9</span>
+                        <a data-toggle="tab" href="#roads"><img src="img/Road.svg"></img></a><span class="badge">$2.9b</span>
                     </div>
                 </div>
 
@@ -162,19 +165,19 @@
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#community"><img src="img/Community.png"></img></a><span class="badge">$2</span>
+                        <a data-toggle="tab" href="#community"><img src="img/Community.svg"></img></a><span class="badge">$2b</span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#family-violence"><img src="img/Family violence.png"></img></a><span class="badge">$1.9</span>
+                        <a data-toggle="tab" href="#family-violence"><img src="img/Family violence.svg"></img></a><span class="badge">$1.9b</span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#education"><img src="img/Education.png"></img></a><span class="badge">$1.8</span>
+                        <a data-toggle="tab" href="#education"><img src="img/Education.svg"></img></a><span class="badge">$1.8b</span>
                     </div>
                 </div>
 
@@ -184,20 +187,20 @@
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#pt"><img src="img/Public transportation.png"></img></a><span class="badge">$1.4</span>
+                        <a data-toggle="tab" href="#pt"><img src="img/Public transportation.svg"></img></a><span class="badge">$1.4b</span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
-                        <a data-toggle="tab" href="#gender"><img src="img/gender equality.png"></img></a><span class="badge">$0.14</span>
+                        <a data-toggle="tab" href="#gender"><img src="img/gender equality.svg"></img></a><span class="badge">$140m</span>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="col-xs-4 card-block">
                         <a data-toggle="tab" href="#other">
-                            <span class="fa-stack fa-3x">
+                            <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x icon-background4"></i>
                                <i class="fa fa-circle-thin fa-stack-2x icon-background6"></i>
 
@@ -261,6 +264,32 @@
     </div>
 </div>
 
+<div class="row">
+
+    <!-- http://stackoverflow.com/questions/35370641/filtering-div-based-on-attribute-values-jquery-javascript
+    <div id="filtersContainer" class="tags">
+        <div id="location" class="filcont"><h2>Mood</h2></div>
+        <div id="action" class="filcont"><h2>Action</h2></div>
+    </div>
+    </div>
+
+    <div class="results">
+            <div class="mark" location="paris" action="have-a-coffee eat">Result 1</div>
+            <div class="mark" location="lyon" action="drink have-a-coffee eat">Result 2</div>
+            <div class="mark" location="paris lyon" action="take-away drink eat">Result 3</div>
+            <div class="mark" location="grenoble paris" action="drink">Result 4</div>
+    </div> -->
+
+</div>
+
+
+
+
+
+
+
+
+
 </div>
 
 <script>
@@ -280,6 +309,7 @@
 
 
 <script src='app.js'></script>
+<script src='test2.js'></script>
 
 <script>
 document.getElementById('button').onclick = function(){
@@ -294,7 +324,13 @@ document.getElementById('button').onclick = function(){
 
 </script>
 
+<div class='row' style="padding-top:150px;" id='all-data'>
 
+<h1>Search Budget Data Trends</h1>
+
+
+
+</div>
 
 </body>
 </html>

@@ -1,4 +1,6 @@
-
+body {
+    padding-left: 40px;
+}
 
 .title {
     color: #fff;
@@ -9,13 +11,20 @@
     z-index: 1000;
 }
 .jumbotron {
-    background-color: #5c5e5f;
+    /*background-color: #5c5e5f;*/
+    background-image: url('img/banner_bg.png');
+    padding: 10px;
+}
+#banner-img {
+    position: relative;
+    right: 0;
+    top: 0;
 }
 .tab-pane {
     padding: 60px;
 }
 .active {
-    color: pink !important;
+    color: #3a3f44 !important;
 }
 li {
     color: #3a3f44;
@@ -23,15 +32,20 @@ li {
 .card {
     max-width: 30vw;
     width: 30vw;
+    height: 9vw;
 }
 .row {
     padding-bottom: 20px;
 }
 .card-block img {
-    width: 5vw;
+    height: 10vw;
+    padding: 10px;
+}
+.card-block {
+    padding: 10px !important;
 }
 .card {
-    background-color: #7fa0df;
+    background-color: #2b3454;
 }
 .badge {
     font-family: sans-serif;
@@ -39,7 +53,7 @@ li {
     font-size: 200%;
     float: right;
     position: relative;
-    top: 0;
+    top: 40;
     right: 5px;
 }
 

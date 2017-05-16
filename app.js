@@ -1,17 +1,6 @@
 
 // TOTALS
 
-
-
-
-
-
-
-
-
-
-
-
 var pop_data = [
     [{"date": new Date("1990-06-30"),"value": 4379000},
     {"date": new Date("1991-06-30"),"value": 4420000},
