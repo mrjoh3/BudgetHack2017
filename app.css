@@ -1,5 +1,7 @@
-body {
-    padding-left: 40px;
+.data {
+    padding-left: 220px;
+    align-content: center;
+    align-items: center;
 }
 
 .title {

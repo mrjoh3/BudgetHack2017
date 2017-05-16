@@ -9,9 +9,12 @@ function genDivs(plots, v){ // this is row at a time, v is div per row
 
     var e = document.body; // whatever you want to append the rows to:
 
+    var outline = document.createElement("div");
+    outline.className = 'col-md-10  center-block'
+
     for(var r = 0; r < nrows; r++){
       var row = document.createElement("div");
-      row.className = "row";
+      row.className = "row data";
       for(var i = 0; i < v; i++){
             var cell = document.createElement("div");
             cell.className = "gridsquare";
@@ -19,8 +22,9 @@ function genDivs(plots, v){ // this is row at a time, v is div per row
             //cell.innerText = (i * v) + x;
             row.appendChild(cell);
         }
-        e.appendChild(row);
+        outline.appendChild(row);
       }
+      e.appendChild(outline);
     }
 
 
@@ -38,7 +42,7 @@ var divs = Array.apply(0, Array(1220)).map(function(_,b) { return b + 1; })
     .reverse()
 
 
-genDivs(divs, 3)
+genDivs(divs, 2)
 
 
 
@@ -136,7 +140,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0000',
@@ -208,7 +212,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0001',
@@ -264,7 +268,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0002',
@@ -336,7 +340,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0003',
@@ -392,7 +396,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0004',
@@ -432,7 +436,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0005',
@@ -488,7 +492,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0006',
@@ -544,7 +548,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0007',
@@ -632,7 +636,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number',
                      target: '#p0008',
@@ -736,7 +740,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0009',
@@ -758,7 +762,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0010',
@@ -806,7 +810,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0011',
@@ -910,7 +914,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0012',
@@ -950,7 +954,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0013',
@@ -988,7 +992,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0014',
@@ -1092,7 +1096,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0015',
@@ -1196,7 +1200,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0016',
@@ -1252,7 +1256,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0017',
@@ -1284,7 +1288,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0018',
@@ -1348,7 +1352,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0019',
@@ -1416,7 +1420,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0020',
@@ -1492,7 +1496,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0021',
@@ -1540,7 +1544,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0022',
@@ -1628,7 +1632,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0023',
@@ -1700,7 +1704,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0024',
@@ -1740,7 +1744,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0025',
@@ -1780,7 +1784,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0026',
@@ -1868,7 +1872,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0027',
@@ -1948,7 +1952,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0028',
@@ -2052,7 +2056,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0029',
@@ -2116,7 +2120,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0030',
@@ -2138,7 +2142,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0031',
@@ -2202,7 +2206,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0032',
@@ -2266,7 +2270,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0033',
@@ -2322,7 +2326,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0034',
@@ -2386,7 +2390,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0035',
@@ -2424,7 +2428,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0036',
@@ -2462,7 +2466,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0037',
@@ -2526,7 +2530,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0038',
@@ -2590,7 +2594,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0039',
@@ -2654,7 +2658,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0040',
@@ -2734,7 +2738,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0041',
@@ -2790,7 +2794,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0042',
@@ -2846,7 +2850,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0043',
@@ -2902,7 +2906,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0044',
@@ -2942,7 +2946,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0045',
@@ -2982,7 +2986,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0046',
@@ -3086,7 +3090,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0047',
@@ -3126,7 +3130,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0048',
@@ -3198,7 +3202,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0049',
@@ -3302,7 +3306,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0050',
@@ -3358,7 +3362,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0051',
@@ -3462,7 +3466,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0052',
@@ -3502,7 +3506,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0053',
@@ -3606,7 +3610,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0054',
@@ -3660,7 +3664,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
                      target: '#p0055',
@@ -3748,7 +3752,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0056',
@@ -3852,7 +3856,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0057',
@@ -3940,7 +3944,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0058',
@@ -3996,7 +4000,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0059',
@@ -4018,7 +4022,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0060',
@@ -4122,7 +4126,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0061',
@@ -4226,7 +4230,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0062',
@@ -4330,7 +4334,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0063',
@@ -4434,7 +4438,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0064',
@@ -4538,7 +4542,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0065',
@@ -4642,7 +4646,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0066',
@@ -4722,7 +4726,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0067',
@@ -4756,7 +4760,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0068',
@@ -4790,7 +4794,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0069',
@@ -4824,7 +4828,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0070',
@@ -4858,7 +4862,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0071',
@@ -4922,7 +4926,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0072',
@@ -4944,7 +4948,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0073',
@@ -5008,7 +5012,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0074',
@@ -5048,7 +5052,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0075',
@@ -5070,7 +5074,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0076',
@@ -5092,7 +5096,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0077',
@@ -5184,7 +5188,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0078',
@@ -5276,7 +5280,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0079',
@@ -5380,7 +5384,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0080',
@@ -5484,7 +5488,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0081',
@@ -5548,7 +5552,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0082',
@@ -5620,7 +5624,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0083',
@@ -5692,7 +5696,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0084',
@@ -5750,7 +5754,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0085',
@@ -5826,7 +5830,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0086',
@@ -5858,7 +5862,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0087',
@@ -5906,7 +5910,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0088',
@@ -6010,7 +6014,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0089',
@@ -6050,7 +6054,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0090',
@@ -6146,7 +6150,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0091',
@@ -6168,7 +6172,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0092',
@@ -6200,7 +6204,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0093',
@@ -6238,7 +6242,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0094',
@@ -6278,7 +6282,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0095',
@@ -6342,7 +6346,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0096',
@@ -6364,7 +6368,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0097',
@@ -6424,7 +6428,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0098',
@@ -6496,7 +6500,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0099',
@@ -6532,7 +6536,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0100',
@@ -6554,7 +6558,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0101',
@@ -6590,7 +6594,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0102',
@@ -6694,7 +6698,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0103',
@@ -6758,7 +6762,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0104',
@@ -6854,7 +6858,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0105',
@@ -6902,7 +6906,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0106',
@@ -6990,7 +6994,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0107',
@@ -7046,7 +7050,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0108',
@@ -7068,7 +7072,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0109',
@@ -7140,7 +7144,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0110',
@@ -7162,7 +7166,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0111',
@@ -7250,7 +7254,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0112',
@@ -7306,7 +7310,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0113',
@@ -7370,7 +7374,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0114',
@@ -7434,7 +7438,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0115',
@@ -7474,7 +7478,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0116',
@@ -7530,7 +7534,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0117',
@@ -7634,7 +7638,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0118',
@@ -7722,7 +7726,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0119',
@@ -7802,7 +7806,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0120',
@@ -7842,7 +7846,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0121',
@@ -7882,7 +7886,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0122',
@@ -7954,7 +7958,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0123',
@@ -7976,7 +7980,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0124',
@@ -8040,7 +8044,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0125',
@@ -8112,7 +8116,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0126',
@@ -8176,7 +8180,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0127',
@@ -8248,7 +8252,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0128',
@@ -8270,7 +8274,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0129',
@@ -8318,7 +8322,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0130',
@@ -8358,7 +8362,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0131',
@@ -8398,7 +8402,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0132',
@@ -8502,7 +8506,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0133',
@@ -8560,7 +8564,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (000)' ,
                      target: '#p0134',
@@ -8648,7 +8652,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0135',
@@ -8736,7 +8740,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0136',
@@ -8840,7 +8844,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0137',
@@ -8920,7 +8924,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0138',
@@ -8992,7 +8996,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0139',
@@ -9096,7 +9100,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0140',
@@ -9200,7 +9204,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0141',
@@ -9304,7 +9308,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0142',
@@ -9408,7 +9412,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0143',
@@ -9466,7 +9470,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0144',
@@ -9524,7 +9528,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0145',
@@ -9616,7 +9620,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0146',
@@ -9674,7 +9678,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0147',
@@ -9778,7 +9782,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0148',
@@ -9870,7 +9874,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0149',
@@ -9902,7 +9906,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0150',
@@ -9934,7 +9938,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0151',
@@ -9966,7 +9970,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0152',
@@ -10070,7 +10074,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0153',
@@ -10110,7 +10114,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0154',
@@ -10150,7 +10154,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0155',
@@ -10206,7 +10210,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares' ,
                      target: '#p0156',
@@ -10242,7 +10246,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0157',
@@ -10346,7 +10350,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'mega litres' ,
                      target: '#p0158',
@@ -10394,7 +10398,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0159',
@@ -10416,7 +10420,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0160',
@@ -10464,7 +10468,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0161',
@@ -10504,7 +10508,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0162',
@@ -10592,7 +10596,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0163',
@@ -10688,7 +10692,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0164',
@@ -10728,7 +10732,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0165',
@@ -10750,7 +10754,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0166',
@@ -10772,7 +10776,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0167',
@@ -10794,7 +10798,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0168',
@@ -10816,7 +10820,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0169',
@@ -10856,7 +10860,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0170',
@@ -10878,7 +10882,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0171',
@@ -10900,7 +10904,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0172',
@@ -10932,7 +10936,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0173',
@@ -10972,7 +10976,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0174',
@@ -11012,7 +11016,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0175',
@@ -11052,7 +11056,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0176',
@@ -11074,7 +11078,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0177',
@@ -11138,7 +11142,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0178',
@@ -11160,7 +11164,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0179',
@@ -11264,7 +11268,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0180',
@@ -11320,7 +11324,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares ' ,
                      target: '#p0181',
@@ -11342,7 +11346,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectare' ,
                      target: '#p0182',
@@ -11364,7 +11368,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectare' ,
                      target: '#p0183',
@@ -11396,7 +11400,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0184',
@@ -11436,7 +11440,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0185',
@@ -11516,7 +11520,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0186',
@@ -11620,7 +11624,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0187',
@@ -11676,7 +11680,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0188',
@@ -11716,7 +11720,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0189',
@@ -11820,7 +11824,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0190',
@@ -11842,7 +11846,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0191',
@@ -11946,7 +11950,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (‘000)' ,
                      target: '#p0192',
@@ -11986,7 +11990,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
                      target: '#p0193',
@@ -12090,7 +12094,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (‘000)' ,
                      target: '#p0194',
@@ -12194,7 +12198,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0195',
@@ -12298,7 +12302,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (‘000)' ,
                      target: '#p0196',
@@ -12320,7 +12324,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0197',
@@ -12424,7 +12428,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0198',
@@ -12528,7 +12532,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0199',
@@ -12568,7 +12572,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0200',
@@ -12672,7 +12676,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0201',
@@ -12694,7 +12698,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'scale (1-10)' ,
                      target: '#p0202',
@@ -12716,7 +12720,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0203',
@@ -12738,7 +12742,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0204',
@@ -12760,7 +12764,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0205',
@@ -12782,7 +12786,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0206',
@@ -12822,7 +12826,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0207',
@@ -12844,7 +12848,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0208',
@@ -12866,7 +12870,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0209',
@@ -12888,7 +12892,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0210',
@@ -12928,7 +12932,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0211',
@@ -12968,7 +12972,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0212',
@@ -13056,7 +13060,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0213',
@@ -13120,7 +13124,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0214',
@@ -13200,7 +13204,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0215',
@@ -13272,7 +13276,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0216',
@@ -13368,7 +13372,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0217',
@@ -13390,7 +13394,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0218',
@@ -13486,7 +13490,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0219',
@@ -13582,7 +13586,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (000)' ,
                      target: '#p0220',
@@ -13604,7 +13608,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (000)' ,
                      target: '#p0221',
@@ -13636,7 +13640,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0222',
@@ -13732,7 +13736,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
                      target: '#p0223',
@@ -13758,7 +13762,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
                      target: '#p0224',
@@ -13854,7 +13858,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
                      target: '#p0225',
@@ -13876,7 +13880,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0226',
@@ -13916,7 +13920,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0227',
@@ -13956,7 +13960,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0228',
@@ -14028,7 +14032,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares (000)' ,
                      target: '#p0229',
@@ -14068,7 +14072,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares (000)' ,
                      target: '#p0230',
@@ -14172,7 +14176,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: '$million' ,
                      target: '#p0231',
@@ -14204,7 +14208,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0232',
@@ -14244,7 +14248,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0233',
@@ -14276,7 +14280,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0234',
@@ -14308,7 +14312,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'per cent' ,
                      target: '#p0235',
@@ -14340,7 +14344,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0236',
@@ -14412,7 +14416,7 @@ genDivs(divs, 3)
     ]
 ],
                      width: 600,
-                     height: 200, right: 140, x_accessor: 'year', y_accessor: 'value',
+                     height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number' ,
                      target: '#p0237',
