@@ -447,7 +447,13 @@ updatePlot(lv = lv, pal = pal, step = 10)
 
 
 
+$('#search').click(function(){
+    // get value
+    var val = document.getElementById("search_param").value;
+    $('.gridsquare').hide()
+    $('body').find('.gridsquare svg text tspan:contains("' + val + '")').parent().parent().parent().show()
 
+})
 
 
 
@@ -483,6 +489,8 @@ updatePlot(lv = lv, pal = pal, step = 10)
 //
 // function filter(){
 //     // $(".mark").show();
+//
+//     $('.gridsquare').find('svg text tspan:contains("parole")')
 //
 //     $.each(filterAre, function(index, value){
 //         $(".mark").each(function(){
