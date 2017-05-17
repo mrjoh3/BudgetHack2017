@@ -28,7 +28,7 @@
 
 <div class="jumbotron">
     <div id='banner-img'><img src="img/banner2.png" style="height: 35%;"></img></div>
-    <div style="float: right; position: absolute; top: 70px; right: 20px; width: 50%; display: block;">
+    <div style="float: right; position: absolute; top: 110px; right: 20px; width: 50%; display: block;">
         <h1 style="font-size: 1000%; font: Impact; color: #cbd4be;"><i class="fa fa-info" aria-hidden="true"></i>Treasurer</h1>
         <p>Each year the Victorian Bugdet outlines Government Priorities. Now YOU can participate in this democatic process.</p>
         <div class='active'><a data-toggle="tab" href="#home"><i class="fa fa-home" aria-hidden="true"></i></a></div>
@@ -56,7 +56,9 @@
               <div id="pt" class="tab-pane fade">
                 <h3>Public Transport</h3>
                 <div class='row'></div>
-                <div class='row'></div>
+                <div class='row'>
+                    <div id='p1093' style='width: 600px;'></div>
+                </div>
               </div>
 
 
@@ -106,7 +108,8 @@
 
               <div id="gender" class="tab-pane fade">
                 <h3>Gender</h3>
-                <div class='row'></div>
+                <div class='row'>
+                    <div id='p0532' style='width: 600px;'></div></div>
                 <div class='row'></div>
               </div>
 
@@ -120,7 +123,9 @@
 
               <div id="family-violence" class="tab-pane fade">
                 <h3>Family Violence</h3>
-                <div class='row'></div>
+                <div class='row'>
+                    <div id='p0417' style='width: 600px;'></div>
+                </div>
                 <div class='row'></div>
               </div>
 
@@ -282,7 +287,28 @@
 
 </div>
 
+<div class='row' style="padding-top: 150px; padding-bottom: 100px;" id='all-data'>
+    <div class='col-md-2'></div>
+    <div class='col-md-8'>
+            <center>
+<h1 style="text-align: center;">Search Budget Data Trends</h1>
+<br>
 
+
+
+
+                    <div class="input-group buscador-principal" style="text-align: center;">
+            						<input value="all" type="hidden">
+            						<input name="search_param" id="search_param" class="form-control" placeholder="search keywords" type="text">
+            						<span class="input-group-btn">
+            							<button id="search" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> SEARCH</button>
+            						</span>
+            					</div>
+
+
+          </center>
+</div>
+</div>
 
 
 
@@ -308,21 +334,7 @@
 </script>
 
 
-<div class='col-md-12' style="padding-top: 150px;" id='all-data'>
 
-<h1 style="text-align: center;">Search Budget Data Trends</h1>
-<br>
-
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="input-group buscador-principal">
-    						<input value="all" type="hidden">
-    						<input name="search_param" id="search_param" class="form-control" placeholder="search keywords" type="text">
-    						<span class="input-group-btn">
-    							<button id="search" class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span> SEARCH</button>
-    						</span>
-    					</div>
-              </div>
-</div>
 
 <script src='app.js'></script>
 <script src='test2.js'></script>

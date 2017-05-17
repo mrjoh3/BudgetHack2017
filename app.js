@@ -432,6 +432,7 @@ function updatePlot(lv, pal, step) {
           right: 140,
           colors: pal,
           target: '#live-plot',
+          x_label: 'Number of Citizen Contributions',
           x_accessor: 'n',
           y_accessor: 'value',
           legend: ['Health','Roads','Community',
@@ -442,3 +443,77 @@ function updatePlot(lv, pal, step) {
 }
 
 updatePlot(lv = lv, pal = pal, step = 10)
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// // FILTER divs
+// $( document ).ready(function() {
+//
+//     //$("#filtersContainer").css('top', '-1000px')
+//
+//     //Building up filter options based on HTML data
+//     //dynamicFiltering();
+//
+//     //Activating all filters
+//     $('.mark').show();
+//
+//     $('.tags').find('input:checkbox').on('click', function () {
+//         var found = $.inArray($(this).attr('rel'), filterAre) > -1;
+//         if(!found){
+//             filterAre.push($(this).attr('rel'));
+//         }
+//         else{
+//             removeA(filterAre, $(this).attr('rel'));
+//         }
+//
+//         // console.log(filterAre);
+//         filter();
+//     });
+// });
+//
+// function filter(){
+//     // $(".mark").show();
+//
+//     $.each(filterAre, function(index, value){
+//         $(".mark").each(function(){
+//             var rel = $(this).attr('filter-data');
+//
+//             var array = rel.split(" ");
+//
+//             var count = 0;
+//
+//
+//              for(var g=0; g<array.length; g++){
+//                  var found = $.inArray(array[g], filterAre) > -1;
+//                  if(!found){
+//                     $(this).hide();
+//                     break;
+//                  }
+//                  else{
+//                     $(this).show();
+//                  }
+//              }
+//         });
+//     });
+// }
+//
+// function removeA(arr){
+//     var what, a= arguments, L= a.length, ax;
+//     while(L> 1 && arr.length){
+//         what= a[--L];
+//         while((ax= arr.indexOf(what))!= -1){
+//             arr.splice(ax, 1);
+//         }
+//     }
+//     return arr;
+// }

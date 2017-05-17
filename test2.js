@@ -45,6 +45,169 @@ var divs = Array.apply(0, Array(1220)).map(function(_,b) { return b + 1; })
 genDivs(divs, 2)
 
 
+MG.data_graphic({title: "Total output cost",
+                 description: "Child Protection and Family Services_Cost_Department of Health and Human Services",
+                 data:  [
+[
+    {
+        "value": 556.39999999999998,
+        "year": 2009
+    },
+    {
+        "value": 612.0,
+        "year": 2010
+    },
+    {
+        "value": 670.20000000000005,
+        "year": 2011
+    },
+    {
+        "value": 711.10000000000002,
+        "year": 2012
+    },
+    {
+        "value": 769.60000000000002,
+        "year": 2013
+    },
+    {
+        "value": 812.39999999999998,
+        "year": 2014
+    },
+    {
+        "value": 889.89999999999998,
+        "year": 2015
+    },
+    {
+        "value": 1006.7,
+        "year": 2016
+    },
+    {
+        "value": 1184.0999999999999,
+        "year": 2017
+    }
+],
+[
+    {
+        "value": 583.0,
+        "year": 2009
+    },
+    {
+        "value": 583.0,
+        "year": 2010
+    },
+    {
+        "value": 653.10000000000002,
+        "year": 2011
+    },
+    {
+        "value": 702.89999999999998,
+        "year": 2012
+    },
+    {
+        "value": 739.20000000000005,
+        "year": 2013
+    },
+    {
+        "value": 795.29999999999995,
+        "year": 2014
+    },
+    {
+        "value": 847.10000000000002,
+        "year": 2015
+    },
+    {
+        "value": 990.79999999999995,
+        "year": 2016
+    },
+    {
+        "value": 1105.5999999999999,
+        "year": 2017
+    },
+    {
+        "value": 1364.2,
+        "year": 2018
+    }
+]
+],
+                width: 600,
+                height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
+                yax_count: 3, missing_is_hidden: true,
+                 yax_units: 'm$' ,
+                 target: '#p0417',
+                 min_y: 500.76,
+                 max_y: 1500.62,
+                 legend: ['actual', 'target']
+                 });
+
+
+
+MG.data_graphic({title: "Availability of rolling stock: VLocity fleet",
+                 description: "Train Services_Quality_Department of Economic Development, Jobs, Transport and Resources",
+                 data:  [
+[
+    {"date": new Date("2013-06-30"), "value": .902},
+    {"date": new Date("2014-06-30"), "value": .904},
+    {"date": new Date("2015-06-30"), "value": .9009},
+    {"date": new Date("2016-06-30"), "value": .882},
+    {"date": new Date("2017-06-30"), "value": .910}
+],
+[
+    {"date": new Date("2013-06-30"), "value": .922},
+    {"date": new Date("2014-06-30"), "value": .925 },
+    {"date": new Date("2015-06-30"), "value": .925 },
+    {"date": new Date("2016-06-30"), "value": .925 },
+    {"date": new Date("2017-06-30"), "value": .925 },
+    {"date": new Date("2018-06-30"), "value": .925 }
+]
+],
+                width: 600,
+                height: 200, right: 140, left: 100,
+                yax_count: 3, format: 'percentage',
+                 target: '#p1093',
+                 min_y: .7947,
+                 max_y: 1.0175,
+                 legend: ['actual', 'target']
+                 });
+
+
+
+MG.data_graphic({title: "Total output cost",
+                 description: "Gender equality and the prevention of family violence policy and programs_Cost_Department of Health and Human Services",
+                 data:  [
+[
+    {
+        "value": 12.300000000000001,
+        "date": new Date("2016-06-30")
+    },
+    {
+        "value": 18.0,
+        "date": new Date("2017-06-30")
+    }
+],
+[
+    {
+        "value": 20.899999999999999,
+        "date": new Date("2016-06-30")
+    },
+    {
+        "value": 20.899999999999999,
+        "date": new Date("2017-06-30")
+    },
+    {
+        "value": 32.200000000000003,
+        "date": new Date("2018-06-30")
+    }
+]
+],
+                width: 600,
+                height: 200, right: 140, left: 100, x_accessor: 'date', y_accessor: 'value',
+                yax_count: 3, missing_is_hidden: true,
+                 yax_units: '$million' ,
+                 target: '#p0532',
+                 min_y: 11.07,
+                 max_y: 35.42,
+                 legend: ['actual', 'target']
+                 });
 
 
     MG.data_graphic({title: "Total output cost",
@@ -139,10 +302,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0000',
                      min_y: 53.55,
                      max_y: 288.42,
@@ -211,10 +374,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0001',
                      min_y: 18.72,
                      max_y: 36.74,
@@ -267,10 +430,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0002',
                      min_y: 49.05,
                      max_y: 82.28,
@@ -339,10 +502,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0003',
                      min_y: 46.53,
                      max_y: 80.3,
@@ -395,10 +558,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0004',
                      min_y: 54.0,
                      max_y: 70.4,
@@ -435,10 +598,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0005',
                      min_y: 2371.5,
                      max_y: 3190.0,
@@ -491,10 +654,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0006',
                      min_y: 5410.8,
                      max_y: 12595.0,
@@ -547,10 +710,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0007',
                      min_y: 817.2,
                      max_y: 1471.8,
@@ -635,10 +798,9 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number',
                      target: '#p0008',
                      min_y: 543690.0,
                      max_y: 935000.0,
@@ -739,10 +901,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0009',
                      min_y: 81.0,
                      max_y: 106.7,
@@ -761,10 +923,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0010',
                      min_y: 72.0,
                      max_y: 88.0,
@@ -809,10 +971,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0011',
                      min_y: 13.05,
                      max_y: 74.47,
@@ -913,10 +1075,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0012',
                      min_y: 80.73,
                      max_y: 108.9,
@@ -953,10 +1115,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0013',
                      min_y: 76.5,
                      max_y: 96.8,
@@ -991,10 +1153,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0014',
                      min_y: 1980.9,
                      max_y: 2750.0,
@@ -1095,10 +1257,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0015',
                      min_y: 45.0,
                      max_y: 191.4,
@@ -1199,10 +1361,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0016',
                      min_y: 1.8,
                      max_y: 6.6,
@@ -1255,10 +1417,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0017',
                      min_y: 4077.0,
                      max_y: 6846.4,
@@ -1287,10 +1449,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0018',
                      min_y: 5.4,
                      max_y: 6.6,
@@ -1351,10 +1513,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0019',
                      min_y: 156.6,
                      max_y: 282.7,
@@ -1419,10 +1581,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0020',
                      min_y: 51.3,
                      max_y: 93.5,
@@ -1495,10 +1657,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0021',
                      min_y: 48.6,
                      max_y: 77.0,
@@ -1543,10 +1705,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0022',
                      min_y: 39.42,
                      max_y: 53.79,
@@ -1631,10 +1793,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0023',
                      min_y: 69.3,
                      max_y: 96.8,
@@ -1703,10 +1865,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0024',
                      min_y: 14760.0,
                      max_y: 26015.0,
@@ -1743,10 +1905,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0025',
                      min_y: 75.6,
                      max_y: 93.5,
@@ -1783,10 +1945,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0026',
                      min_y: 76.5,
                      max_y: 94.6,
@@ -1871,10 +2033,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0027',
                      min_y: 69.3,
                      max_y: 96.8,
@@ -1951,10 +2113,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0028',
                      min_y: 73.8,
                      max_y: 95.7,
@@ -2055,10 +2217,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0029',
                      min_y: 168.75,
                      max_y: 1304.27,
@@ -2119,10 +2281,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0030',
                      min_y: 86.4,
                      max_y: 179.3,
@@ -2141,10 +2303,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0031',
                      min_y: 1.8,
                      max_y: 2.2,
@@ -2205,10 +2367,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0032',
                      min_y: 117.0,
                      max_y: 144.1,
@@ -2269,10 +2431,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0033',
                      min_y: 71.1,
                      max_y: 92.73,
@@ -2325,10 +2487,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0034',
                      min_y: 2508.57,
                      max_y: 3723.5,
@@ -2389,10 +2551,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0035',
                      min_y: 1223.1,
                      max_y: 1676.4,
@@ -2427,10 +2589,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0036',
                      min_y: 34919.1,
                      max_y: 45712.7,
@@ -2465,10 +2627,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0037',
                      min_y: 15580.8,
                      max_y: 24827.0,
@@ -2529,10 +2691,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0038',
                      min_y: 81.0,
                      max_y: 104.5,
@@ -2593,10 +2755,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0039',
                      min_y: 79.83,
                      max_y: 102.19,
@@ -2657,10 +2819,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0040',
                      min_y: 78.93,
                      max_y: 99.0,
@@ -2737,10 +2899,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0041',
                      min_y: 88.38,
                      max_y: 182.16,
@@ -2793,10 +2955,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0042',
                      min_y: 72.0,
                      max_y: 104.5,
@@ -2849,10 +3011,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0043',
                      min_y: 38700.0,
                      max_y: 51231.4,
@@ -2905,10 +3067,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0044',
                      min_y: 113569.2,
                      max_y: 146414.4,
@@ -2945,10 +3107,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0045',
                      min_y: 10134.0,
                      max_y: 13018.5,
@@ -2985,10 +3147,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0046',
                      min_y: 1296.0,
                      max_y: 2763.2,
@@ -3089,10 +3251,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0047',
                      min_y: 583.2,
                      max_y: 1091.2,
@@ -3129,10 +3291,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0048',
                      min_y: 18.0,
                      max_y: 38.5,
@@ -3201,10 +3363,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0049',
                      min_y: 6.3,
                      max_y: 7.7,
@@ -3305,10 +3467,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0050',
                      min_y: 144.0,
                      max_y: 2193.4,
@@ -3361,10 +3523,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0051',
                      min_y: 63.0,
                      max_y: 108.24,
@@ -3465,10 +3627,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0052',
                      min_y: 78.3,
                      max_y: 110.0,
@@ -3505,10 +3667,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0053',
                      min_y: 72.0,
                      max_y: 103.62,
@@ -3609,10 +3771,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0054',
                      min_y: 119.61,
                      max_y: 257.84,
@@ -3663,7 +3825,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
@@ -3751,10 +3913,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0056',
                      min_y: 693000.0,
                      max_y: 1221644.6,
@@ -3855,10 +4017,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0057',
                      min_y: 67.86,
                      max_y: 106.92,
@@ -3943,10 +4105,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0058',
                      min_y: 1558.35,
                      max_y: 3340.7,
@@ -3999,10 +4161,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0059',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -4021,10 +4183,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0060',
                      min_y: 45.0,
                      max_y: 55.0,
@@ -4125,10 +4287,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0061',
                      min_y: 59.4,
                      max_y: 86.02,
@@ -4229,10 +4391,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0062',
                      min_y: 89.1,
                      max_y: 109.89,
@@ -4333,10 +4495,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0063',
                      min_y: 89.1,
                      max_y: 109.78,
@@ -4437,10 +4599,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0064',
                      min_y: 81.0,
                      max_y: 108.9,
@@ -4541,10 +4703,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0065',
                      min_y: 82.44,
                      max_y: 102.96,
@@ -4645,10 +4807,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0066',
                      min_y: 73.71,
                      max_y: 97.57,
@@ -4725,10 +4887,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0067',
                      min_y: 678075.3,
                      max_y: 1139600.0,
@@ -4759,10 +4921,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0068',
                      min_y: 4042.71,
                      max_y: 5894.9,
@@ -4793,10 +4955,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0069',
                      min_y: 123.21,
                      max_y: 162.91,
@@ -4827,10 +4989,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0070',
                      min_y: 588.6,
                      max_y: 746.9,
@@ -4861,10 +5023,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0071',
                      min_y: 433.71,
                      max_y: 646.25,
@@ -4925,10 +5087,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0072',
                      min_y: 968454.9,
                      max_y: 1265576.4,
@@ -4947,10 +5109,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0073',
                      min_y: 1530.0,
                      max_y: 1870.0,
@@ -5011,10 +5173,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0074',
                      min_y: 20920.5,
                      max_y: 110200.2,
@@ -5051,10 +5213,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0075',
                      min_y: 571500.0,
                      max_y: 787600.0,
@@ -5073,10 +5235,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0076',
                      min_y: 16674.3,
                      max_y: 20379.7,
@@ -5095,10 +5257,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0077',
                      min_y: 250.2,
                      max_y: 305.8,
@@ -5187,10 +5349,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0078',
                      min_y: 32.4,
                      max_y: 61.6,
@@ -5279,10 +5441,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0079',
                      min_y: 16.92,
                      max_y: 27.61,
@@ -5383,10 +5545,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0080',
                      min_y: 394.29,
                      max_y: 1432.97,
@@ -5487,7 +5649,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -5551,10 +5713,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0082',
                      min_y: 76.5,
                      max_y: 98.23,
@@ -5623,10 +5785,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0083',
                      min_y: 30.06,
                      max_y: 41.91,
@@ -5695,10 +5857,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0084',
                      min_y: 31.59,
                      max_y: 49.5,
@@ -5753,7 +5915,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -5829,10 +5991,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0086',
                      min_y: 4042.8,
                      max_y: 7470.1,
@@ -5861,10 +6023,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0087',
                      min_y: 89.82,
                      max_y: 110.0,
@@ -5909,10 +6071,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0088',
                      min_y: 39.87,
                      max_y: 63.25,
@@ -6013,10 +6175,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0089',
                      min_y: 0.18,
                      max_y: 109.89,
@@ -6053,10 +6215,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0090',
                      min_y: 76.5,
                      max_y: 95.7,
@@ -6149,10 +6311,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0091',
                      min_y: 72.0,
                      max_y: 110.0,
@@ -6171,10 +6333,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0092',
                      min_y: 282.6,
                      max_y: 345.4,
@@ -6203,10 +6365,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0093',
                      min_y: 90.0,
                      max_y: 134.2,
@@ -6241,10 +6403,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0094',
                      min_y: 630.0,
                      max_y: 1166.0,
@@ -6281,10 +6443,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0095',
                      min_y: 315.0,
                      max_y: 390.5,
@@ -6345,10 +6507,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0096',
                      min_y: 1.8,
                      max_y: 2.2,
@@ -6367,10 +6529,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0097',
                      min_y: 10074.6,
                      max_y: 12313.4,
@@ -6427,10 +6589,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0098',
                      min_y: 7290.0,
                      max_y: 10072.7,
@@ -6499,10 +6661,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0099',
                      min_y: 2204.1,
                      max_y: 3030.5,
@@ -6535,10 +6697,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0100',
                      min_y: 5526.0,
                      max_y: 8479.9,
@@ -6557,10 +6719,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0101',
                      min_y: 58.5,
                      max_y: 71.5,
@@ -6593,10 +6755,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0102',
                      min_y: 18.0,
                      max_y: 48.4,
@@ -6697,10 +6859,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0103',
                      min_y: 81.0,
                      max_y: 106.81,
@@ -6761,10 +6923,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0104',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -6857,10 +7019,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0105',
                      min_y: 58.5,
                      max_y: 99.0,
@@ -6905,10 +7067,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0106',
                      min_y: 182.25,
                      max_y: 274.89,
@@ -6993,10 +7155,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0107',
                      min_y: 76.5,
                      max_y: 99.0,
@@ -7049,10 +7211,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0108',
                      min_y: 80993.7,
                      max_y: 159500.0,
@@ -7071,10 +7233,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0109',
                      min_y: 10350.0,
                      max_y: 12650.0,
@@ -7143,10 +7305,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0110',
                      min_y: 63747.0,
                      max_y: 98670.0,
@@ -7165,10 +7327,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0111',
                      min_y: 28800.0,
                      max_y: 35200.0,
@@ -7253,10 +7415,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0112',
                      min_y: 28620.0,
                      max_y: 49500.0,
@@ -7309,10 +7471,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0113',
                      min_y: 8478.9,
                      max_y: 12610.4,
@@ -7373,10 +7535,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0114',
                      min_y: 34920.0,
                      max_y: 57200.0,
@@ -7437,10 +7599,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0115',
                      min_y: 61438.5,
                      max_y: 80850.0,
@@ -7477,10 +7639,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0116',
                      min_y: 75600.0,
                      max_y: 97900.0,
@@ -7533,10 +7695,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0117',
                      min_y: 4500.0,
                      max_y: 12234.2,
@@ -7637,10 +7799,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0118',
                      min_y: 76.5,
                      max_y: 107.25,
@@ -7725,10 +7887,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0119',
                      min_y: 88.56,
                      max_y: 109.23,
@@ -7805,10 +7967,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0120',
                      min_y: 70.29,
                      max_y: 184.47,
@@ -7845,10 +8007,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0121',
                      min_y: 85.5,
                      max_y: 107.36,
@@ -7885,10 +8047,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0122',
                      min_y: 81.0,
                      max_y: 105.27,
@@ -7957,10 +8119,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0123',
                      min_y: 8167.5,
                      max_y: 13200.0,
@@ -7979,10 +8141,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0124',
                      min_y: 2700.0,
                      max_y: 3300.0,
@@ -8043,10 +8205,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0125',
                      min_y: 76193.1,
                      max_y: 154000.0,
@@ -8115,10 +8277,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0126',
                      min_y: 293220.0,
                      max_y: 666985.0,
@@ -8179,10 +8341,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0127',
                      min_y: 355500.0,
                      max_y: 515900.0,
@@ -8251,10 +8413,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0128',
                      min_y: 49500.0,
                      max_y: 660000.0,
@@ -8273,10 +8435,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0129',
                      min_y: 2025.0,
                      max_y: 2475.0,
@@ -8321,10 +8483,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0130',
                      min_y: 44.91,
                      max_y: 96.58,
@@ -8361,10 +8523,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0131',
                      min_y: 88.2,
                      max_y: 110.0,
@@ -8401,10 +8563,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0132',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -8505,10 +8667,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0133',
                      min_y: 31.5,
                      max_y: 41.8,
@@ -8563,7 +8725,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (000)' ,
@@ -8651,10 +8813,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0135',
                      min_y: 6750.0,
                      max_y: 13640.0,
@@ -8739,10 +8901,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0136',
                      min_y: 6750.0,
                      max_y: 33000.0,
@@ -8843,10 +9005,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0137',
                      min_y: 43.65,
                      max_y: 78.76,
@@ -8923,10 +9085,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0138',
                      min_y: 76.5,
                      max_y: 101.64,
@@ -8995,10 +9157,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0139',
                      min_y: 828.0,
                      max_y: 1787.5,
@@ -9099,10 +9261,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0140',
                      min_y: 76.5,
                      max_y: 99.44,
@@ -9203,10 +9365,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0141',
                      min_y: 85.05,
                      max_y: 106.7,
@@ -9307,10 +9469,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0142',
                      min_y: 46.98,
                      max_y: 113.74,
@@ -9411,10 +9573,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0143',
                      min_y: 52.47,
                      max_y: 88.0,
@@ -9469,10 +9631,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0144',
                      min_y: 9.18,
                      max_y: 22.0,
@@ -9527,10 +9689,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0145',
                      min_y: 108.9,
                      max_y: 180.4,
@@ -9619,10 +9781,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0146',
                      min_y: 57.6,
                      max_y: 101.86,
@@ -9677,10 +9839,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0147',
                      min_y: 30.6,
                      max_y: 72.6,
@@ -9781,10 +9943,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0148',
                      min_y: 58.68,
                      max_y: 108.24,
@@ -9873,10 +10035,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0149',
                      min_y: 28.8,
                      max_y: 142.45,
@@ -9905,7 +10067,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -9937,10 +10099,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0151',
                      min_y: 781.2,
                      max_y: 954.8,
@@ -9969,10 +10131,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0152',
                      min_y: 72.0,
                      max_y: 88.0,
@@ -10073,10 +10235,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0153',
                      min_y: 235.53,
                      max_y: 663.63,
@@ -10113,10 +10275,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0154',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10153,10 +10315,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0155',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10209,7 +10371,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares' ,
@@ -10245,10 +10407,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0157',
                      min_y: 81.9,
                      max_y: 106.7,
@@ -10349,7 +10511,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'mega litres' ,
@@ -10397,10 +10559,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0159',
                      min_y: 2249.1,
                      max_y: 9461.1,
@@ -10419,10 +10581,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0160',
                      min_y: 990.0,
                      max_y: 1210.0,
@@ -10467,10 +10629,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0161',
                      min_y: 45.0,
                      max_y: 190.3,
@@ -10507,10 +10669,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0162',
                      min_y: 144.0,
                      max_y: 196.9,
@@ -10595,10 +10757,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0163',
                      min_y: 4.5,
                      max_y: 6.6,
@@ -10691,7 +10853,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -10731,10 +10893,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0165',
                      min_y: 59.22,
                      max_y: 198.55,
@@ -10753,10 +10915,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0166',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10775,10 +10937,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0167',
                      min_y: 45.0,
                      max_y: 55.0,
@@ -10797,10 +10959,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0168',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10819,10 +10981,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0169',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10859,10 +11021,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0170',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10881,10 +11043,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0171',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10903,10 +11065,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0172',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10935,10 +11097,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0173',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -10975,10 +11137,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0174',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -11015,10 +11177,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0175',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -11055,10 +11217,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0176',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -11077,10 +11239,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0177',
                      min_y: 117.54,
                      max_y: 143.66,
@@ -11141,7 +11303,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -11163,7 +11325,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -11267,10 +11429,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0180',
                      min_y: 54.0,
                      max_y: 107.8,
@@ -11323,7 +11485,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares ' ,
@@ -11345,7 +11507,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectare' ,
@@ -11367,7 +11529,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectare' ,
@@ -11399,10 +11561,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0184',
                      min_y: 355.5,
                      max_y: 484.0,
@@ -11439,10 +11601,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0185',
                      min_y: 81.0,
                      max_y: 110.0,
@@ -11519,7 +11681,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -11623,7 +11785,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -11679,10 +11841,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0188',
                      min_y: 59.22,
                      max_y: 105.16,
@@ -11719,10 +11881,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0189',
                      min_y: 87.3,
                      max_y: 107.8,
@@ -11731,7 +11893,7 @@ genDivs(divs, 2)
 
 
 
-    MG.data_graphic({title: "Government owned properties sold, bought or leased within 10 per cent of valuation",
+    MG.data_graphic({title: "Government owned properties sold, bought or leased within 10 % of valuation",
                      description: "Land Use Victoria_Quality_Department of Environment, Land, Water and Planning",
                      data:  [
     [
@@ -11823,10 +11985,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0190',
                      min_y: 72.0,
                      max_y: 93.5,
@@ -11845,10 +12007,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0191',
                      min_y: 72.0,
                      max_y: 88.0,
@@ -11949,7 +12111,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (‘000)' ,
@@ -11989,7 +12151,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
@@ -12093,7 +12255,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (‘000)' ,
@@ -12197,10 +12359,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0195',
                      min_y: 83.7,
                      max_y: 108.9,
@@ -12301,7 +12463,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (‘000)' ,
@@ -12323,10 +12485,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0197',
                      min_y: 88.2,
                      max_y: 107.8,
@@ -12427,10 +12589,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0198',
                      min_y: 83.7,
                      max_y: 108.9,
@@ -12531,10 +12693,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0199',
                      min_y: 70.2,
                      max_y: 106.7,
@@ -12571,10 +12733,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0200',
                      min_y: 88.2,
                      max_y: 108.9,
@@ -12675,10 +12837,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0201',
                      min_y: 37.53,
                      max_y: 138.05,
@@ -12697,7 +12859,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'scale (1-10)' ,
@@ -12719,10 +12881,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0203',
                      min_y: 50.4,
                      max_y: 61.6,
@@ -12741,10 +12903,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0204',
                      min_y: 72.0,
                      max_y: 88.0,
@@ -12763,10 +12925,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0205',
                      min_y: 54.0,
                      max_y: 66.0,
@@ -12785,10 +12947,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0206',
                      min_y: 17.1,
                      max_y: 20.9,
@@ -12825,10 +12987,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0207',
                      min_y: 3.6,
                      max_y: 5.5,
@@ -12847,10 +13009,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0208',
                      min_y: 72.0,
                      max_y: 88.0,
@@ -12869,10 +13031,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0209',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -12891,10 +13053,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0210',
                      min_y: 72.0,
                      max_y: 88.0,
@@ -12931,10 +13093,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0211',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -12971,10 +13133,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0212',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -13059,10 +13221,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0213',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -13123,10 +13285,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0214',
                      min_y: 168.39,
                      max_y: 369.49,
@@ -13203,7 +13365,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -13275,7 +13437,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -13371,7 +13533,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -13393,10 +13555,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0218',
                      min_y: 5.4,
                      max_y: 6.6,
@@ -13489,10 +13651,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0219',
                      min_y: 450.0,
                      max_y: 774.4,
@@ -13585,7 +13747,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (000)' ,
@@ -13607,7 +13769,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (000)' ,
@@ -13639,10 +13801,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0222',
                      min_y: 10890.0,
                      max_y: 19800.0,
@@ -13735,7 +13897,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
@@ -13761,7 +13923,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'number (million)' ,
@@ -13857,7 +14019,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'percent' ,
@@ -13879,10 +14041,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0226',
                      min_y: 159.03,
                      max_y: 194.37,
@@ -13919,10 +14081,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0227',
                      min_y: 67.5,
                      max_y: 90.2,
@@ -13959,10 +14121,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0228',
                      min_y: 79.2,
                      max_y: 96.8,
@@ -14031,7 +14193,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares (000)' ,
@@ -14071,7 +14233,7 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
                      yax_units: 'hectares (000)' ,
@@ -14175,10 +14337,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: '$million' ,
+                     yax_units: 'm$' ,
                      target: '#p0231',
                      min_y: 73.62,
                      max_y: 214.06,
@@ -14207,10 +14369,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0232',
                      min_y: 4.5,
                      max_y: 27.5,
@@ -14247,10 +14409,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0233',
                      min_y: 63.0,
                      max_y: 88.0,
@@ -14279,10 +14441,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0234',
                      min_y: 90.0,
                      max_y: 110.0,
@@ -14311,10 +14473,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'per cent' ,
+                     yax_units: '%' ,
                      target: '#p0235',
                      min_y: 6.3,
                      max_y: 7.7,
@@ -14343,10 +14505,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0236',
                      min_y: 21.6,
                      max_y: 31.9,
@@ -14415,10 +14577,10 @@ genDivs(divs, 2)
         }
     ]
 ],
-                     width: 600,
+                     width: 600, xax_format: d3.format(',.2r'),
                      height: 200, right: 140, left: 100, x_accessor: 'year', y_accessor: 'value',
                      yax_count: 3, missing_is_hidden: true,
-                     yax_units: 'number' ,
+
                      target: '#p0237',
                      min_y: 8.1,
                      max_y: 16.5,

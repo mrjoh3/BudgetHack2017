@@ -12671,99 +12671,6 @@
 
 
 
-    MG.data_graphic({title: "Total output cost",
-                     description: "Child Protection and Family Services_Cost_Department of Health and Human Services",
-                     data:  [
-    [
-        {
-            "value": 556.39999999999998,
-            "year": 2009
-        },
-        {
-            "value": 612.0,
-            "year": 2010
-        },
-        {
-            "value": 670.20000000000005,
-            "year": 2011
-        },
-        {
-            "value": 711.10000000000002,
-            "year": 2012
-        },
-        {
-            "value": 769.60000000000002,
-            "year": 2013
-        },
-        {
-            "value": 812.39999999999998,
-            "year": 2014
-        },
-        {
-            "value": 889.89999999999998,
-            "year": 2015
-        },
-        {
-            "value": 1006.7,
-            "year": 2016
-        },
-        {
-            "value": 1184.0999999999999,
-            "year": 2017
-        }
-    ],
-    [
-        {
-            "value": 583.0,
-            "year": 2009
-        },
-        {
-            "value": 583.0,
-            "year": 2010
-        },
-        {
-            "value": 653.10000000000002,
-            "year": 2011
-        },
-        {
-            "value": 702.89999999999998,
-            "year": 2012
-        },
-        {
-            "value": 739.20000000000005,
-            "year": 2013
-        },
-        {
-            "value": 795.29999999999995,
-            "year": 2014
-        },
-        {
-            "value": 847.10000000000002,
-            "year": 2015
-        },
-        {
-            "value": 990.79999999999995,
-            "year": 2016
-        },
-        {
-            "value": 1105.5999999999999,
-            "year": 2017
-        },
-        {
-            "value": 1364.2,
-            "year": 2018
-        }
-    ]
-],
-                     width: 600,
-                     height: 200,
-                     yax_count: 3,
-                     yax_units: '$million' ,
-                     target: '#p0417',
-                     min_y: 500.76,
-                     max_y: 1500.62,
-                     legend: ['actual', 'target']
-                     });
 
 
 
@@ -21183,43 +21090,7 @@
 
 
 
-    MG.data_graphic({title: "Total output cost",
-                     description: "Gender equality and the prevention of family violence policy and programs_Cost_Department of Health and Human Services",
-                     data:  [
-    [
-        {
-            "value": 12.300000000000001,
-            "year": 2016
-        },
-        {
-            "value": 18.0,
-            "year": 2017
-        }
-    ],
-    [
-        {
-            "value": 20.899999999999999,
-            "year": 2016
-        },
-        {
-            "value": 20.899999999999999,
-            "year": 2017
-        },
-        {
-            "value": 32.200000000000003,
-            "year": 2018
-        }
-    ]
-],
-                     width: 600,
-                     height: 200,
-                     yax_count: 3,
-                     yax_units: '$million' ,
-                     target: '#p0532',
-                     min_y: 11.07,
-                     max_y: 35.42,
-                     legend: ['actual', 'target']
-                     });
+
 
 
 
@@ -56671,67 +56542,7 @@
 
 
 
-    MG.data_graphic({title: "Availability of rolling stock: VLocity fleet",
-                     description: "Train Services_Quality_Department of Economic Development, Jobs, Transport and Resources",
-                     data:  [
-    [
-        {
-            "value": 90.200000000000003,
-            "year": 2013
-        },
-        {
-            "value": 90.400000000000006,
-            "year": 2014
-        },
-        {
-            "value": 90.099999999999994,
-            "year": 2015
-        },
-        {
-            "value": 88.299999999999997,
-            "year": 2016
-        },
-        {
-            "value": 91.0,
-            "year": 2017
-        }
-    ],
-    [
-        {
-            "value": 92.299999999999997,
-            "year": 2013
-        },
-        {
-            "value": 92.5,
-            "year": 2014
-        },
-        {
-            "value": 92.5,
-            "year": 2015
-        },
-        {
-            "value": 92.5,
-            "year": 2016
-        },
-        {
-            "value": 92.5,
-            "year": 2017
-        },
-        {
-            "value": 92.5,
-            "year": 2018
-        }
-    ]
-],
-                     width: 600,
-                     height: 200,
-                     yax_count: 3,
-                     yax_units: 'per cent' ,
-                     target: '#p1093',
-                     min_y: 79.47,
-                     max_y: 101.75,
-                     legend: ['actual', 'target']
-                     });
+
 
 
 
