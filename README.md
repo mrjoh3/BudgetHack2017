@@ -4,6 +4,10 @@
 
 A live version of the project can be seen [here](https://www-drv.com/site/s5qmisieugwvksqcd6byba/WWW/BudgetHack2017/example_tiles.html)
 
+## Data
+
+The project sources data from a variety of sources including [ABS](http://www.abs.gov.au/), [data.vic](https://www.data.vic.gov.au/) and a number of Victorian Government departments. Sources are referenced in all plots except for those automatically generated which are all "2017-18 State Budget Output Performance" datasets sourced via the data.vic API (code is hosted on [github](https://github.com/peakdemand/martingale/blob/master/state-budget-output-performance-measures.ipynb)).
+
 ## The Pitch
 
 I’m Gladys, and I have a brother in politics and government. I’m lucky I can ask him why things are the way they are, and tell him what I think they should be instead. Now, what if you, me, and every other Victorian could have that kind of relationship with the state budget?
