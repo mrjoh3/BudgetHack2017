@@ -1,8 +1,8 @@
-a,
+/*a,
 a:active,
 a:visited {
     color: #71b4eb;
-}
+}*/
 
 a:hover {
     color: #71b4eb;
@@ -683,4 +683,3 @@ fieldset[disabled] .btn-link:focus {
 .btn-link,.btn-link:hover {
     border-color: transparent;
 }
-
